@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9a00a401-51ab-47a1-b8ec-8c91a3b40062" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://www.maecco.net/wcfkc/svcKioskoCli.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="svcKioskoCli.xsd" MetadataType="Schema" ID="3a2da367-1b98-4fd5-8f9d-2d313a7cf2f7" SourceId="1" SourceUrl="http://www.maecco.net/wcfkc/svcKioskoCli.svc?xsd=xsd3" />
+    <MetadataFile FileName="svcKioskoCli1.xsd" MetadataType="Schema" ID="60e5a74c-c574-44ee-b6e6-5f9b11e0c978" SourceId="1" SourceUrl="http://www.maecco.net/wcfkc/svcKioskoCli.svc?xsd=xsd2" />
+    <MetadataFile FileName="svcKioskoCli.disco" MetadataType="Disco" ID="91b904ac-83f7-4342-82d3-61c7f864c524" SourceId="1" SourceUrl="http://www.maecco.net/wcfkc/svcKioskoCli.svc?disco" />
+    <MetadataFile FileName="svcKioskoCli2.xsd" MetadataType="Schema" ID="f7afdddb-e92e-4466-8b15-9175464238a8" SourceId="1" SourceUrl="http://www.maecco.net/wcfkc/svcKioskoCli.svc?xsd=xsd0" />
+    <MetadataFile FileName="svcKioskoCli3.xsd" MetadataType="Schema" ID="82103d1f-43a3-4f10-ad5b-c4abcafe6433" SourceId="1" SourceUrl="http://www.maecco.net/wcfkc/svcKioskoCli.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="e7379a3e-1e9b-4ee1-8f15-a9a2acb15ff9" SourceId="1" SourceUrl="http://www.maecco.net/wcfkc/svcKioskoCli.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
