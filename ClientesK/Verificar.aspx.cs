@@ -30,7 +30,7 @@ using wcfKioskoCli;
                         if (ValidarConfirmacion != null)
                         {
 
-                            Tabla MiTabla = Manejador.getEjecutaStoredProcedure1("setVerificarEmail", Session["idtmp"].ToString() + "|" + Session["usuario"].ToString());
+                            Tabla MiTabla = Manejador.getEjecutaStoredProcedure1("setVerificarEmail", claveAcceso);
 
                             if (MiTabla != null)
                             {

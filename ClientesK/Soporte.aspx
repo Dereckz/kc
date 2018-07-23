@@ -1,12 +1,14 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ValidarEmail.aspx.cs" Inherits="ValidarEmail" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Soporte.aspx.cs" Inherits="Soporte" %>
 
-<!DOCTYPE >
+<!DOCTYPE html >
 
-<html >
-<head runat="server">
+<html>
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <title>Mbcgroup</title>
+
+  
+  <title>MBC GROUP</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -34,60 +36,85 @@
         }
     </style>
 </head>
-<body class="hold-transition login-page" runat="server" >
-   <div class="login-box">
-   <div class="login-logo">
-    <a href="#"><b>MBC</b>GROUP</a>
+<body class="hold-transition login-page"  >
+<div class="login-box">
+ <div class="login-logo">
+  <a href="#"><b>MBC</b>GROUP</a>
   </div>
-       <%--<div class="login-logo">
+  <%--<div class="login-logo">
     <a href="#"><b>Operadora</b>Mx</a>
   </div>--%>
   <!-- /.login-logo -->
   <div class="login-box-body" >
     <p class="login-box-msg">
         <span style="color: rgb(102, 102, 102); font-family: &quot;Source Sans Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255);display: inline !important; float: none;">
-        Ingrese un correo electronico</span></p>
+        Ingrese los datos para contactar a soporte</span></p>
 
     <form id="Form1"  runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server">
     </asp:ScriptManager>
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <ContentTemplate>
-           <div class="form-group has-feedback">
+        <div class="form-group has-feedback">
         
-                    <asp:TextBox ID="txtCorreo" runat="server" type="text" class="form-control" placeholder="Correo electronico"></asp:TextBox>
+                    <asp:TextBox ID="txtnombre" runat="server" type="text" class="form-control" placeholder="Nombre completo"></asp:TextBox>
+                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+         </div>
+        <div class="form-group has-feedback">
+        
+                    <asp:TextBox ID="txtusuario" runat="server" type="text" class="form-control" placeholder="Usuario"></asp:TextBox>
                     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
               </div>
+        
+              <div class="form-group has-feedback">
+        
+                    <asp:TextBox ID="txtcorreo" runat="server" type="text" class="form-control" placeholder="Correo electronico"></asp:TextBox>
+                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+              </div>
+
+              <div class= "form-group has-feedback">
+
+              <asp:TextBox runat="server" ID="txtdescripcion" TextMode="MultiLine" Rows="10" class="form-control" placeholder="Descripcion del problema" />
+              </div>
+               
+             
               <div class="row">
-                <div class="col-xs-8"> 
-                <asp:RequiredFieldValidator ID="rfv" runat="server" 
-                          ControltoValidate="txtCorreo" initialvalue=" ">
-                    Debe ingresar un correo
-                    </asp:RequiredFieldValidator>
+                <div class="col-xs-8">
+                  <div class="bottom">
                  
+                     Su mensaje sera respondido a su correo electronico</div>
                 </div>
                 <!-- /.col -->
                 <div class="col-xs-4">
             
-                        <asp:Button ID="cmdSend" runat="server" Text="Enviar" type="submit" 
-                            class="btn btn-primary btn-block btn-flat" onclick="cmdenviar_Click" />
+                        <asp:Button ID="cmdrecuperar" runat="server" Text="Enviar" type="submit" 
+                            class="btn btn-primary btn-block btn-flat" onclick="cmdrecuperar_Click"  />
           
                 </div>
                 <!-- /.col -->
-                  <asp:Label ID="lblMensaje" runat="server" 
-                      Text="Este correo sera asociado a su cuenta, debe ingresar un correo valido para poder continuar."></asp:Label>
               </div>
       </ContentTemplate>
     </asp:UpdatePanel>
     </form>
 
-    </div>
+    
+
+  </div>
+  <!-- /.login-box-body -->
+</div>
+<!-- /.login-box -->
+
+<!-- jQuery 2.2.0 -->
+<script src="plugins/jQuery/jQuery-2.2.0.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script  src="bootstrap/js/bootstrap.min.js"></script>
+
 
     <script type="text/javascript">
         //      var boton = document.getElementById("cmdSend");
         //       // cuando se pulsa en el enlace
         function validarart(form) {
-            var seleccion = confirm("Revise su correo electronico se le ha enviado un mensaje de verificación.");
+            var seleccion = confirm("Su mensaje se ha enviado correctamente.");
             if (seleccion)
                 location.href = "../kc/default.aspx";
             //usado para que no haga postback el boton de asp.net cuando 
@@ -95,5 +122,6 @@
             return seleccion;
         }
     </script>
+
 </body>
 </html>

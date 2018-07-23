@@ -19,6 +19,11 @@ public partial class _Default : System.Web.UI.Page
     {
         try
         {
+            Session["objusuario"] = "";
+            Session["idusuario"] = "";
+            Session["idtmp"] = "";
+            Session["usuario"] = "";
+
             IsvcKioskoCliClient Manejador = new IsvcKioskoCliClient();
             Tabla MiTabla = Manejador.getEjecutaStoredProcedure1("getvalidarusuario_KC", txtusuario.Text + "|" + txtcontra.Text);
             if (MiTabla != null)
@@ -74,5 +79,9 @@ public partial class _Default : System.Web.UI.Page
     {
         Response.Redirect("Recuperar.aspx");
 
+    }
+    protected void LinkButton2_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Soporte.aspx");
     }
 }
