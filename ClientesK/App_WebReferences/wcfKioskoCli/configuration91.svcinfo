@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="bKeymbrxsWtYTNpbdtuIduoCFaw=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="UiZFRjxWMZP/8YdZiDDzQiBIvl0=">
   <bindingConfigurations>
-    <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IsvcKioskoCli">
+    <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IsvcKioskoCli1">
       <properties>
         <property path="/name" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>BasicHttpBinding_IsvcKioskoCli</serializedValue>
+          <serializedValue>BasicHttpBinding_IsvcKioskoCli1</serializedValue>
         </property>
         <property path="/closeTimeout" isComplexType="false" isExplicitlyDefined="true" clrType="System.TimeSpan, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -112,7 +112,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IsvcKioskoCli" contract="wcfKioskoCli.IsvcKioskoCli" bindingType="basicHttpBinding" address="http://www.maecco.net/wcfkc/svcKioskoCli.svc" bindingConfiguration="BasicHttpBinding_IsvcKioskoCli">
+    <endpoint name="BasicHttpBinding_IsvcKioskoCli" contract="wcfKioskoCli.IsvcKioskoCli" bindingType="basicHttpBinding" address="http://www.maecco.net/wcfkc/svcKioskoCli.svc" bindingConfiguration="BasicHttpBinding_IsvcKioskoCli1">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://www.maecco.net/wcfkc/svcKioskoCli.svc</serializedValue>
@@ -124,7 +124,7 @@
           <serializedValue>basicHttpBinding</serializedValue>
         </property>
         <property path="/bindingConfiguration" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>BasicHttpBinding_IsvcKioskoCli</serializedValue>
+          <serializedValue>BasicHttpBinding_IsvcKioskoCli1</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>wcfKioskoCli.IsvcKioskoCli</serializedValue>

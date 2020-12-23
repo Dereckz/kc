@@ -4,11 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using wcfKioskoCli;
 using System.Net.Mail;
 using System.IO;
-
-
+using wcfKioskoCli;
     public partial class CambiarPassword : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)

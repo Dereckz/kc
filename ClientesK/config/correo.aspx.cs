@@ -9,7 +9,6 @@ using System.Web.UI.WebControls;
 using System.Data;
 using wcfKioskoCli;
 
-
     public partial class config_correo : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)

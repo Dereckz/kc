@@ -50,7 +50,7 @@ public class EnviarCorreos
 
             SmtpClient client = new SmtpClient();
             //client.Credentials = new System.Net.NetworkCredential("omar.perez@contanetica.com", "omarp");
-            client.Credentials = new System.Net.NetworkCredential("soporte@mbcgroup.mx", "@tortadejamon");
+            client.Credentials = new System.Net.NetworkCredential("soporte@mbcgroup.mx", "@tortadejamon@");
             client.Port = 26;
             //client.Host = "contanetica.com";
             client.Host = "mbcgroup.mx";

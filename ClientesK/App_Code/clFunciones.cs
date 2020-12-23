@@ -4,8 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI.WebControls;
 using System.Data;
-using wcfKioskoCli; 
-
+using wcfKioskoCli;
 
 /// <summary>
 /// Descripción breve de clFunciones

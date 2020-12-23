@@ -7,7 +7,6 @@ using System.Web.UI.WebControls;
 using System.Data;
 using wcfKioskoCli;
 
-
     public partial class Verificar : System.Web.UI.Page
     {
 
