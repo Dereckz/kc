@@ -40,7 +40,6 @@ public class EnviarCorreos
         {
             MailMessage msg = new MailMessage();
             msg.To.Add(email);
-           // msg.From = new MailAddress("omar.perez@co ntanetica.com", "Avizor Fiscal", Encoding.UTF8);
             msg.From = new MailAddress("soporte@mbcgroup.mx", "MBC GROUP", Encoding.UTF8);
             msg.Subject = asunto;
             msg.SubjectEncoding = Encoding.UTF8;

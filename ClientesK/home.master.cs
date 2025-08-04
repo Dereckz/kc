@@ -22,7 +22,23 @@ public partial class home : System.Web.UI.MasterPage
             lblnombre.Text = usuario.Rows[0]["nombre"].ToString();
             lblnombre2.Text = usuario.Rows[0]["nombre"].ToString();
             lblnombre3.Text = usuario.Rows[0]["nombre"].ToString();
+
+            if (usuario.Rows[0]["fkiIdCliente"].ToString() == "1052" || usuario.Rows[0]["fkiIdCliente"].ToString() == "1053")
+            {
+                this.documentacionli.Visible = true;
+                this.documentacionlia.Visible = true;
+                this.documentacionlia2.Visible = true;
+            }
+            else
+            {
+                this.documentacionli.Visible = false;
+                this.documentacionlia.Visible = false;
+                this.documentacionlia2.Visible = false;
+            }
         }
+        
+
+       
     }
     protected void cmdsalir_Click(object sender, EventArgs e)
     {

@@ -24,7 +24,8 @@ public partial class _Default : System.Web.UI.Page
             Session["usuario"] = "";
 
             IsvcKioskoCliClient Manejador = new IsvcKioskoCliClient();
-            Tabla MiTabla = Manejador.getEjecutaStoredProcedure1("getvalidarusuario_KC", txtusuario.Text + "|" + txtcontra.Text);
+            Tabla MiTabla = Manejador.getEjecutaStoredProcedure1("getvalidarusuario_KC", txtusuario.Text.Replace(" ", "X") + "|" + txtcontra.Text.Replace(" ", "X"));
+
             if (MiTabla != null)
             {
                 DataTable dtusuario = clFunciones.convertToDatatable(MiTabla);

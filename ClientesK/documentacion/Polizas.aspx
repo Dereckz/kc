@@ -1,17 +1,17 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/home.master" AutoEventWireup="true" CodeFile="documentos.aspx.cs" Inherits="imss_documentos" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/home.master" AutoEventWireup="true" CodeFile="Polizas.aspx.cs" Inherits="documentacion_Polizas" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <section class="content-header">
       <h1>
-        Determinación de cuotas, comprobantes de pago
+         Polizas
         <small><asp:Label ID="lblnombre" runat="server" Text=""></asp:Label></small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="../inicio/inicio.aspx"><i class="fa fa-dashboard"></i> Inicio</a></li>
         <%--<li><a href="#">Bienvenido</a></li>--%>
-        <li class="active">Cuotas</li>
+        <li class="active">Polizas</li>
       </ol>
     </section>
 
@@ -25,7 +25,7 @@
                 Empresas Asignadas
                 <br/>
                 <asp:DropDownList ID="cboempresas" runat="server"></asp:DropDownList>
-                <br/>
+             <br/>
                 <br/>
                 Mes:
                 <asp:DropDownList ID="cbomes" runat="server">
@@ -45,24 +45,15 @@
                 <br/>
                  <br/>
                 Año:
-
                 <asp:DropDownList ID="cboanio" runat="server">
                    
-                  
-                    <asp:ListItem>2020</asp:ListItem>
-                    <asp:ListItem>2021</asp:ListItem>
-                    <asp:ListItem>2022</asp:ListItem>
                     <asp:ListItem>2023</asp:ListItem>
                     <asp:ListItem>2024</asp:ListItem>
                     <asp:ListItem>2025</asp:ListItem>
-                    <asp:ListItem>2026</asp:ListItem>
-                    <asp:ListItem>2027</asp:ListItem>
-                    <asp:ListItem>2028</asp:ListItem>
                 </asp:DropDownList>
                 <br/>
                 <br/>
-                
-
+               
                 <asp:Button ID="cmdbuscar" runat="server" Text="Buscar" 
                     onclick="cmdbuscar_Click"></asp:Button>
                 <br/>
@@ -72,8 +63,8 @@
                     GridLines="None" CellPadding="4" ForeColor="#333333" AllowPaging="True" 
                         onrowcommand="dtgnominas_RowCommand" 
                         onpageindexchanging="dtgnominas_PageIndexChanging" 
-                        onselectedindexchanged="dtgnominas_SelectedIndexChanged"
-                        >
+                        onselectedindexchanged="dtgnominas_SelectedIndexChanged" 
+                    Height="377px" Width="555px">
                             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                             <Columns>
                                 
@@ -84,17 +75,11 @@
                                 </asp:TemplateField>
                                 
                                 
-
-                                
-                                
-                                
                                 <asp:TemplateField HeaderText="Archivo">
                                     <ItemTemplate>
                                         <asp:Label Width="300px" style=" text-align:right;" ID="nombrearchivo" runat="server" Text='<%# Bind("nombrearchivo") %>'  Visible="true" ></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                
-                                
                                 
 
                                 <asp:CommandField ButtonType="Image" HeaderText="" 
@@ -103,12 +88,7 @@
                                     
                                 <HeaderStyle Width="40px" />
                                 </asp:CommandField>
-                                          
-                                
-                                
-                                          
-                               
-
+                           
                                           
                             </Columns>
                             <EditRowStyle BackColor="#999999" />
@@ -129,4 +109,5 @@
     </section>
 
 </asp:Content>
+
 

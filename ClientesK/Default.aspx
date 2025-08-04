@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Mbcgroup</title>
+  <title>Volkhausen</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -26,10 +26,19 @@
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
+  <style type="text/css">
+        .style1
+        {
+            width: 200px;
+            height: 180px;
+        }
+    </style>
 </head>
 <body class="hold-transition login-page ">
 <div class="login-box">
   <div class="login-logo">
+  
+     <%-- <img alt="" class="style1" src="imagenes/logooperadora.png" />--%>
     <a href="#"><b>MBC</b>GROUP</a>
   </div>
   <!-- /.login-logo -->

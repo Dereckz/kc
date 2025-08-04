@@ -33,6 +33,7 @@
         Session["ruta"] = "";
         Session["archivo"] = "";
      //   Session["fkiIdCliente"] = ""; 
+        Session["dsDocumentosB"] = new System.Data.DataSet();
 
     }
 

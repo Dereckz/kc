@@ -30,7 +30,7 @@ public partial class inicio_inicio : System.Web.UI.Page
             String tmp = usuario.Rows[0]["fechapass"].ToString();
             if (!tmp.Equals(""))
             {
-                DateTime passDate = Convert.ToDateTime(tmp);
+                DateTime passDate = Convert.ToDateTime(tmp.Remove(18));
                 TimeSpan ts = thisDay - passDate;
 
                 // Difference in days.  
@@ -41,7 +41,7 @@ public partial class inicio_inicio : System.Web.UI.Page
                 {
                     // Response.Redirect("/configurar/Contra.aspx");
 
-                    Response.Redirect("http://www.maecco.net/kc/Pass.aspx");
+                    Response.Redirect("http://www.volkhausen.net/Pass.aspx");
 
                     // ScriptManager.RegisterStartupScript(this, typeof(string), "alerta", "alert('Necesita actualizar su contraseña por seguridad');", true);
                 }

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using wcfKioskoCli;
 
-public partial class nomina_comprobante : System.Web.UI.Page
+public partial class documentacion_Polizas: System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -52,8 +52,8 @@ public partial class nomina_comprobante : System.Web.UI.Page
     protected void cmdbuscar_Click(object sender, EventArgs e)
     {
         lblmensaje.Text = "";
-
-        cargar_grid();
+         cargar_grid();
+          
     }
 
     private void cargar_grid()
@@ -61,31 +61,27 @@ public partial class nomina_comprobante : System.Web.UI.Page
         wcfKioskoCli.IsvcKioskoCliClient Manejador = new IsvcKioskoCliClient();
 
 
+         
         DataSet dsEmpresas = new DataSet();
         dsEmpresas.Tables.Add("Tabla");
         dsEmpresas.Tables[0].Columns.Add("iIdInfoKiosko");
-        dsEmpresas.Tables[0].Columns.Add("anio");
-        dsEmpresas.Tables[0].Columns.Add("mes");
-        dsEmpresas.Tables[0].Columns.Add("fecha");
         dsEmpresas.Tables[0].Columns.Add("nombrearchivo");
 
         try
         {
-            Tabla tbEmpresas = Manejador.getEjecutaStoredProcedure1("getDocNominasMesAno_KC", Session["idusuario"].ToString() + "|" + cboempresas.SelectedValue + "|" + (cbomes.SelectedIndex + 1) + "|" + cboanio.Text);
+            Tabla tbEmpresas = Manejador.getEjecutaStoredProcedure1("getDocumentosPolizas", (cbomes.SelectedIndex + 1) + "|" + (cboanio.SelectedValue) + "|" + (cboempresas.SelectedValue));
             if (tbEmpresas != null)
             {
+               
+          
                 DataTable dtEmpresas = clFunciones.convertToDatatable(tbEmpresas);
                 for (int x = 0; x < dtEmpresas.Rows.Count; x++)
                 {
                     dsEmpresas.Tables[0].Rows.Add(dtEmpresas.Rows[x]["iIdInfoKiosko"],
-                                                    dtEmpresas.Rows[x]["anio"],
-                                                    dtEmpresas.Rows[x]["mes"],
-                                                    DateTime.Parse(dtEmpresas.Rows[x]["fecha"].ToString()).ToShortDateString(),
                                                     dtEmpresas.Rows[x]["nombrearchivo"]);
 
 
-
-                }
+                      }
 
                 Session["dsPagos"] = dsEmpresas;
                 dtgnominas.DataSource = dsEmpresas;
@@ -143,32 +139,7 @@ public partial class nomina_comprobante : System.Web.UI.Page
                 }
 
             }
-            //if (e.CommandName == "Delete")
-            //{
-            //    int id = Convert.ToInt32(e.CommandArgument);
-
-
-            //    //DateTime fecha = DateTime.Parse(((Label)dtgnominas.Rows[id].FindControl("lblfecha")).Text);
-            //    string sindicato = ((Label)dtgnominas.Rows[id].FindControl("lbldpagosin")).Text;
-
-            //    Session["ruta"] = "pagosn/" + sindicato + ".pdf";
-            //    String path = Server.MapPath("../pagosn") + "\\" + sindicato + ".pdf";
-            //    String path2 = "../pagosn/" + sindicato + ".pdf";
-            //    Session["archivo"] = sindicato + ".pdf";
-            //    System.IO.FileInfo toDownload = new System.IO.FileInfo(path);
-            //    if (toDownload.Exists)
-            //    {
-            //        Response.Redirect("../descargar.aspx", true);
-            //        //ScriptManager.RegisterStartupScript(Page, Page.GetType(), "popup", "window.open('" + path2 + "','_blank')", true);
-            //    }
-            //    else
-            //    {
-            //        ScriptManager.RegisterStartupScript(this, typeof(string), "alert", "mensaje('No se encuentra el archivo ');", true);
-
-            //    }
-
-            //}
-
+           
         }
         catch (Exception EX)
         {
